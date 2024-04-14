@@ -1,0 +1,70 @@
+<app-default-login-layout
+    title="Sign in and start today!t"
+    primaryBtnText="Sing Now"
+    secondaryBtnText="Login Now"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [disablePrimaryBtn]="!signupForm.valid"
+>
+    <form [formGroup]="signupForm">
+        <app-primary-input
+        formControlName="name"
+        inputName="name"
+        type="text"
+        label="Your name"
+        placeholder="John"
+        >
+        <img src="/assets/svg/person.svg" /> 
+        </app-primary-input>
+
+        <app-primary-input
+        formControlName="lastname"
+        inputName="lastname"
+        type="text"
+        label="Lastname"
+        placeholder="Doe Robert"
+        >
+        <img src="/assets/svg/person.svg" /> 
+        </app-primary-input>
+
+        <app-primary-input
+        formControlName="numberPhone"
+        inputName="numberPhone"
+        type="text"
+        label="Number Phone"
+        placeholder="6199999-9999"
+        >
+        <img src="/assets/svg/phone.svg" /> 
+        </app-primary-input>
+
+        <app-primary-input
+        formControlName="email"
+        inputName="email"
+        type="email"
+        label="Email"
+        placeholder="jonh@gmail.com"
+        >
+        <img src="/assets/svg/email.svg" /> 
+        </app-primary-input>
+        
+        <app-primary-input
+        formControlName="password"
+        inputName="password"
+        type="password"
+        label="Your Password"
+        placeholder="password"
+        >
+        <img src="/assets/svg/password.svg" /> 
+        </app-primary-input>
+
+        <app-primary-input
+        formControlName="passwordConfirm"
+        inputName="passwordConfirm"
+        type="password"
+        label="Confirm your Password"
+        placeholder="Confirm your Password"
+        >
+        <img src="/assets/svg/password.svg" /> 
+        </app-primary-input>
+    </form>
+</app-default-login-layout>
